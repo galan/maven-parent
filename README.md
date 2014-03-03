@@ -1,4 +1,4 @@
 maven-parent
 ============
 
-Maven parent pom
+Maven parent pom for my projects
