@@ -32,8 +32,8 @@
 	</prerequisites>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github.com/d8bitr/maven-parent.git</developerConnection>
-		<url>https://github.com/d8bitr/maven-parent</url>
+		<developerConnection>scm:git:ssh://git@github.com/galan/maven-parent.git</developerConnection>
+		<url>https://github.com/galan/maven-parent</url>
 	</scm>
 
 
@@ -234,7 +234,7 @@
 						<include>**/*</include>
 					</includes>
 					<repositoryName>maven-repository</repositoryName> <!-- github repo name -->
-					<repositoryOwner>d8bitr</repositoryOwner> <!-- github username  -->
+					<repositoryOwner>galan</repositoryOwner> <!-- github username  -->
 					<merge>true</merge>
 				</configuration>
 				<executions>
@@ -277,7 +277,7 @@
 
 	<developers>
 		<developer>
-			<id>d8bitr</id>
+			<id>galan</id>
 			<url>http://www.galan.de</url>
 			<name>Daniel Galán y Martins</name>
 			<roles>
