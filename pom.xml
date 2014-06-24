@@ -11,15 +11,22 @@
 		<library.junit.version>4.11</library.junit.version>
 		<library.easymock.version>3.2</library.easymock.version>
 		<library.hamcrest.version>1.3</library.hamcrest.version>
-		<library.assertj.version>1.6.0</library.assertj.version>
+		<library.assertj.version>1.6.1</library.assertj.version>
 		<library.slf4j.version>1.7.7</library.slf4j.version>
+		<library.commons-lang3.version>3.3.2</library.commons-lang3.version>
+		<library.commons-io.version>2.4</library.commons-io.version>
+		<library.commons-codec.version>1.9</library.commons-codec.version>
+		<library.commons-collections4.version>4.0</library.commons-collections4.version>
+		<library.guava.version>17.0</library.guava.version>
+		<library.guice.version>3.0</library.guice.version>
+		<library.xstream.version>1.4.7</library.xstream.version>
 		<plugin.checkstyle.version>2.12.1</plugin.checkstyle.version>
 		<plugin.maven-compiler.version>3.1</plugin.maven-compiler.version>
 		<plugin.maven-deploy.version>2.8.1</plugin.maven-deploy.version>
 		<plugin.maven-war.version>2.4</plugin.maven-war.version>
 		<plugin.maven-resources.version>2.6</plugin.maven-resources.version>
 		<plugin.maven-source.version>2.2.1</plugin.maven-source.version>
-		<plugin.maven-jar.version>2.4</plugin.maven-jar.version>
+		<plugin.maven-jar.version>2.5</plugin.maven-jar.version>
 		<plugin.maven-surefire.version>2.17</plugin.maven-surefire.version>
 		<plugin.maven-failsafe.version>2.17</plugin.maven-failsafe.version>
 		<plugin.github.site-maven.version>0.9</plugin.github.site-maven.version>
@@ -94,39 +101,39 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.3.2</version>
+				<version>${library.commons-lang3.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.4</version>
+				<version>${library.commons-io.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.9</version>
+				<version>${library.commons-codec.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
-				<version>4.0</version>
+				<version>${library.commons-collections4.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>17.0</version>
+				<version>${library.guava.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.google.inject</groupId>
 				<artifactId>guice</artifactId>
-				<version>3.0</version>
+				<version>${library.guice.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>com.thoughtworks.xstream</groupId>
 				<artifactId>xstream</artifactId>
-				<version>1.4.7</version>
+				<version>${library.xstream.version}</version>
 			</dependency>
 			
 			
