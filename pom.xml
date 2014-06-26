@@ -30,7 +30,7 @@
 		<plugin.maven-surefire.version>2.17</plugin.maven-surefire.version>
 		<plugin.maven-failsafe.version>2.17</plugin.maven-failsafe.version>
 		<plugin.github.site-maven.version>0.9</plugin.github.site-maven.version>
-		<jdk.compiler.version>1.7</jdk.compiler.version>
+		<jdk.compiler.version>1.8</jdk.compiler.version>
 		<github.global.server>github</github.global.server> <!-- github server must correspond to entry in ~/.m2/settings.xml -->
 		<github.staging.path>${project.build.directory}/mvn-repo</github.staging.path> <!-- local staging location before uploading to github -->
 	</properties>
