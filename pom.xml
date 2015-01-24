@@ -49,6 +49,12 @@
 
 
 	<dependencies>
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+			
 		<!-- Unit testing -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -74,12 +80,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Logging -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-			</dependency>
-			
 			<!-- Unit testing -->
 			<dependency>
 				<groupId>junit</groupId>
