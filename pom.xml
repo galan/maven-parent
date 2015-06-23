@@ -11,18 +11,17 @@
 		<jdk.compiler.version>1.8</jdk.compiler.version>
 
 		<library.junit.version>4.12</library.junit.version>
-		<library.easymock.version>3.3.1</library.easymock.version>
-		<library.hamcrest.version>1.3</library.hamcrest.version>
 		<library.assertj.version>3.0.0</library.assertj.version>
+
 		<library.log4j2.version>2.3</library.log4j2.version>
 		<library.slf4j.version>1.7.12</library.slf4j.version>
+
 		<library.commons-lang3.version>3.4</library.commons-lang3.version>
 		<library.commons-io.version>2.4</library.commons-io.version>
 		<library.commons-codec.version>1.10</library.commons-codec.version>
 		<library.commons-collections4.version>4.0</library.commons-collections4.version>
 		<library.guava.version>18.0</library.guava.version>
 		<library.guice.version>3.0</library.guice.version>
-		<library.xstream.version>1.4.8</library.xstream.version>
 
 		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
 		<plugin.maven-compiler.version>3.3</plugin.maven-compiler.version>
@@ -60,16 +59,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-library</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

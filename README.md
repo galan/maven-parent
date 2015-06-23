@@ -1,4 +1,4 @@
 maven-parent
 ============
 
-Maven parent pom for my projects
+Maven parent pom for projects from https://github.com/galan
