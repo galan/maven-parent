@@ -29,6 +29,7 @@
 		<plugin.maven-war.version>2.6</plugin.maven-war.version>
 		<plugin.maven-resources.version>2.7</plugin.maven-resources.version>
 		<plugin.maven-source.version>2.4</plugin.maven-source.version>
+		<plugin.maven-javadoc.version>2.10.3</plugin.maven-javadoc.version>
 		<plugin.maven-jar.version>2.6</plugin.maven-jar.version>
 		<plugin.maven-surefire.version>2.18.1</plugin.maven-surefire.version>
 		<plugin.maven-failsafe.version>2.18.1</plugin.maven-failsafe.version>
@@ -236,6 +237,24 @@
 				<executions>
 					<execution>
 						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<!-- required to bundle javadoc files in deployment -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>${plugin.maven-javadoc.version}</version>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>
