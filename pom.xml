@@ -25,7 +25,7 @@
 		<library.commons-codec.version>1.10</library.commons-codec.version>
 		<library.commons-collections4.version>4.0</library.commons-collections4.version>
 		<library.guava.version>18.0</library.guava.version>
-		<library.guice.version>3.0</library.guice.version>
+		<library.guice.version>4.0</library.guice.version>
 
 		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
 		<plugin.maven-compiler.version>3.3</plugin.maven-compiler.version>
@@ -58,6 +58,11 @@
 		<developerConnection>scm:git:ssh://git@github.com/galan/maven-parent.git</developerConnection>
 		<url>https://github.com/galan/maven-parent</url>
 	</scm>
+
+	<issueManagement>
+		<system>github</system>
+		<url>${project.scm.url}/issues</url>
+	</issueManagement>
 
 	<developers>
 		<developer>
@@ -325,7 +330,7 @@
 		</plugins>
 	</reporting>
 
-
+	<!--
 	<repositories>
 		<repository>
 			<id>sonatype-nexus-snapshots</id>
@@ -339,6 +344,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	-->
 
 	<distributionManagement>
 		<snapshotRepository>
