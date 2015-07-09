@@ -26,6 +26,7 @@
 		<library.commons-collections4.version>4.0</library.commons-collections4.version>
 		<library.guava.version>18.0</library.guava.version>
 		<library.guice.version>4.0</library.guice.version>
+		<library.checkstyle.version>6.8.1</library.checkstyle.version>
 
 		<plugin.checkstyle.version>2.15</plugin.checkstyle.version>
 		<plugin.maven-compiler.version>3.3</plugin.maven-compiler.version>
@@ -236,10 +237,27 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>${plugin.checkstyle.version}</version>
-				<configuration>
-					<configLocation>.settings/checkstyle.xml</configLocation>
-					<failsOnError>true</failsOnError>
-				</configuration>
+				<executions>
+					<execution>
+						<id>validate</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<configLocation>.settings/checkstyle.xml</configLocation>
+							<includeTestSourceDirectory>true</includeTestSourceDirectory>
+							<failsOnError>true</failsOnError>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.puppycrawl.tools</groupId>
+						<artifactId>checkstyle</artifactId>
+						<version>${library.checkstyle.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 
 			<plugin>
