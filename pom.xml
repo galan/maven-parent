@@ -17,7 +17,7 @@
 		<library.junit.version>4.12</library.junit.version>
 		<library.assertj.version>3.1.0</library.assertj.version>
 
-		<library.log4j2.version>2.3</library.log4j2.version>
+		<library.log4j2.version>2.4</library.log4j2.version>
 		<library.slf4j.version>1.7.12</library.slf4j.version>
 
 		<library.commons-lang3.version>3.4</library.commons-lang3.version>
