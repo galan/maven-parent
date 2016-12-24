@@ -26,7 +26,7 @@
 		<library.commons-collections4.version>4.1</library.commons-collections4.version>
 		<library.guava.version>20.0</library.guava.version>
 		<library.guice.version>4.1.0</library.guice.version>
-		<library.checkstyle.version>7.1.2</library.checkstyle.version>
+		<library.checkstyle.version>7.3</library.checkstyle.version>
 
 		<plugin.checkstyle.version>2.17</plugin.checkstyle.version>
 		<plugin.maven-compiler.version>3.6.0</plugin.maven-compiler.version>
@@ -239,15 +239,18 @@
 				<version>${plugin.checkstyle.version}</version>
 				<executions>
 					<execution>
-						<id>validate</id>
-						<phase>compile</phase>
+						<id>checkstyle</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>check</goal>
 						</goals>
 						<configuration>
+							<sourceDirectories>${project.basedir}/src/main/java</sourceDirectories>
+							<testSourceDirectories>${project.basedir}/src/test/java</testSourceDirectories>
 							<configLocation>checkstyle.xml</configLocation>
-							<includeTestSourceDirectory>true</includeTestSourceDirectory>
+							<includeTestSourceDirectory>false</includeTestSourceDirectory>
 							<failsOnError>true</failsOnError>
+							<consoleOutput>true</consoleOutput>
 						</configuration>
 					</execution>
 				</executions>
