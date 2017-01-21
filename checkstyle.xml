@@ -20,7 +20,7 @@
 
 		<!-- Imports -->
 		<module name="IllegalImport">
-			<property name="illegalPkgs" value="sun, com.sun, org.apache.logging.log4j.util, org.assertj.core.util.Strings" />
+			<property name="illegalPkgs" value="sun, com.sun, org.apache.logging.log4j.util, org.assertj.core.util.Strings, org.assertj.core.util.Lists" />
 		</module>
 
 		<module name="UpperEll" />
@@ -31,14 +31,16 @@
 
 		<!-- Coding -->
 		<module name="EmptyStatement" />
-		<module name="ParameterAssignment" />
-		<module name="EmptyBlock" />
+		<module name="EmptyBlock">
+			<property name="option" value="text" />
+		</module>
 		<module name="HiddenField">
 			<property name="tokens" value="VARIABLE_DEF" />
 		</module>
 		<module name="EmptyCatchBlock">
 			<property name="exceptionVariableName" value="expected|ignore" />
 		</module>
+		<module name="ParameterAssignment" />
 
 		<!-- <module name="MissingSwitchDefault"/> -->
 		<module name="SimplifyBooleanExpression" />
@@ -74,5 +76,9 @@
 			<property name="format" value="Logger.getLogger\((?!stackTraceElements\[THREAD_TYPE_DEEP\])" />
 		</module>
 		-->
+		<module name="Regexp">
+			<property name="illegalPattern" value="true" />
+			<property name="format" value="(import .+\.repackaged\..+;)" />
+		</module>
 	</module>
 </module>
