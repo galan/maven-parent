@@ -245,7 +245,9 @@
 							<goal>check</goal>
 						</goals>
 						<configuration>
-							<sourceDirectories>${project.basedir}/src/main/java</sourceDirectories>
+							<sourceDirectories>
+								<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+							</sourceDirectories>
 							<testSourceDirectories>${project.basedir}/src/test/java</testSourceDirectories>
 							<configLocation>checkstyle.xml</configLocation>
 							<includeTestSourceDirectory>false</includeTestSourceDirectory>
