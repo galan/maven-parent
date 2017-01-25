@@ -248,7 +248,9 @@
 							<sourceDirectories>
 								<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 							</sourceDirectories>
-							<testSourceDirectories>${project.basedir}/src/test/java</testSourceDirectories>
+							<testSourceDirectories>
+								<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+							</testSourceDirectories>
 							<configLocation>checkstyle.xml</configLocation>
 							<includeTestSourceDirectory>false</includeTestSourceDirectory>
 							<failsOnError>true</failsOnError>
