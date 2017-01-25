@@ -17,14 +17,14 @@
 		<library.junit.version>4.12</library.junit.version>
 		<library.assertj.version>3.6.2</library.assertj.version>
 
-		<library.log4j2.version>2.7</library.log4j2.version>
+		<library.log4j2.version>2.8</library.log4j2.version>
 		<library.slf4j.version>1.7.22</library.slf4j.version>
 
 		<library.commons-lang3.version>3.5</library.commons-lang3.version>
 		<library.commons-io.version>2.5</library.commons-io.version>
 		<library.commons-codec.version>1.10</library.commons-codec.version>
 		<library.commons-collections4.version>4.1</library.commons-collections4.version>
-		<library.guava.version>21.0</library.guava.version>
+		<library.guava.version>20.0</library.guava.version> <!-- hold on 21.0, not zookeeper compatible -->
 		<library.guice.version>4.1.0</library.guice.version>
 		<library.checkstyle.version>7.3</library.checkstyle.version>
 
