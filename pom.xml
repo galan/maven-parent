@@ -3,7 +3,7 @@
 
 	<groupId>de.galan</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.12.0</version>
+	<version>0.12.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
@@ -64,7 +64,7 @@
 		<connection>scm:git:ssh://github.com/galan/maven-parent.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/galan/maven-parent.git</developerConnection>
 		<url>https://github.com/galan/maven-parent</url>
-		<tag>v0.12.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
