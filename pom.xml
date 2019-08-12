@@ -20,8 +20,8 @@
 		<library.junit-platform.version>1.5.1</library.junit-platform.version>
 
 		<!-- logging libraries -->
-		<library.log4j2.version>2.12.0</library.log4j2.version>
-		<library.slf4j.version>1.7.26</library.slf4j.version>
+		<library.log4j2.version>2.12.1</library.log4j2.version>
+		<library.slf4j.version>1.7.27</library.slf4j.version>
 
 		<!-- utility libraries -->
 		<library.commons-lang3.version>3.9</library.commons-lang3.version>
