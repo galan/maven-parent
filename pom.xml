@@ -30,7 +30,7 @@
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
 		<library.guava.version>28.0-jre</library.guava.version>
 		<library.guice.version>4.2.2</library.guice.version>
-		<library.checkstyle.version>8.23</library.checkstyle.version>
+		<library.checkstyle.version>8.29</library.checkstyle.version>
 
 		<!-- maven plugins -->
 		<plugin.checkstyle.version>3.1.0</plugin.checkstyle.version>
