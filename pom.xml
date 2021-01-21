@@ -15,34 +15,38 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- testing libraries -->
-		<library.assertj.version>3.13.2</library.assertj.version>
-		<library.junit-jupiter.version>5.5.1</library.junit-jupiter.version>
-		<library.junit-platform.version>1.5.1</library.junit-platform.version>
+		<library.assertj.version>3.18.1</library.assertj.version>
+		<library.junit-jupiter.version>5.7.0</library.junit-jupiter.version>
+		<library.junit-platform.version>1.7.0</library.junit-platform.version>
 
 		<!-- logging libraries -->
-		<library.log4j2.version>2.12.1</library.log4j2.version>
-		<library.slf4j.version>1.7.27</library.slf4j.version>
+		<library.log4j2.version>2.14.0</library.log4j2.version>
+		<library.slf4j.version>1.7.30</library.slf4j.version>
 
 		<!-- utility libraries -->
-		<library.commons-lang3.version>3.9</library.commons-lang3.version>
-		<library.commons-io.version>2.6</library.commons-io.version>
-		<library.commons-codec.version>1.13</library.commons-codec.version>
+		<library.commons-lang3.version>3.11</library.commons-lang3.version>
+		<library.commons-io.version>2.8.0</library.commons-io.version>
+		<library.commons-codec.version>1.15</library.commons-codec.version>
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
 		<library.guava.version>28.0-jre</library.guava.version>
-		<library.guice.version>4.2.2</library.guice.version>
-		<library.checkstyle.version>8.23</library.checkstyle.version>
+		<library.guice.version>4.2.3</library.guice.version>
+		<library.checkstyle.version>8.39</library.checkstyle.version>
 
 		<!-- maven plugins -->
-		<plugin.checkstyle.version>3.1.0</plugin.checkstyle.version>
+		<plugin.checkstyle.version>3.1.1</plugin.checkstyle.version>
+		<plugin.maven-clean.version>3.1.0</plugin.maven-clean.version>
 		<plugin.maven-compiler.version>3.8.1</plugin.maven-compiler.version>
-		<plugin.maven-war.version>3.2.3</plugin.maven-war.version>
-		<plugin.maven-resources.version>3.1.0</plugin.maven-resources.version>
-		<plugin.maven-source.version>3.1.0</plugin.maven-source.version>
-		<plugin.maven-javadoc.version>3.1.1</plugin.maven-javadoc.version>
-		<plugin.maven-jar.version>3.1.2</plugin.maven-jar.version>
+		<plugin.maven-resources.version>3.2.0</plugin.maven-resources.version>
+		<plugin.maven-source.version>3.2.1</plugin.maven-source.version>
+		<plugin.maven-javadoc.version>3.2.0</plugin.maven-javadoc.version>
+		<plugin.maven-jar.version>3.2.0</plugin.maven-jar.version>
+		<plugin.maven-war.version>3.3.1</plugin.maven-war.version>
 		<plugin.maven-surefire.version>2.22.2</plugin.maven-surefire.version>
 		<plugin.maven-failsafe.version>2.22.2</plugin.maven-failsafe.version>
+		<plugin.maven-install.version>2.5.2</plugin.maven-install.version>
 		<plugin.maven-deploy.version>2.8.2</plugin.maven-deploy.version>
+		<plugin.maven-site.version>3.9.1</plugin.maven-site.version>
+		<plugin.maven-enforcer.version>1.4.1</plugin.maven-enforcer.version>
 		<plugin.maven-gpg.version>1.6</plugin.maven-gpg.version>
 		<plugin.maven-release.version>2.5.3</plugin.maven-release.version>
 		<plugin.nexus-staging.version>1.6.8</plugin.nexus-staging.version>
@@ -55,10 +59,6 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-	<prerequisites>
-		<maven>3.6.1</maven>
-	</prerequisites>
 
 	<scm>
 		<connection>scm:git:ssh://github.com/galan/maven-parent.git</connection>
@@ -256,6 +256,12 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${plugin.maven-clean.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${plugin.maven-compiler.version}</version>
 				<configuration>
@@ -395,6 +401,18 @@
 			</plugin>
 
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>${plugin.maven-install.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>${plugin.maven-site.version}</version>
+			</plugin>
+
+			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>${plugin.nexus-staging.version}</version>
@@ -409,7 +427,7 @@
 			<!-- let the build fail if cyclic dependencies are found -->
 			<plugin>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>1.4.1</version>
+				<version>${plugin.maven-enforcer.version}</version>
 				<dependencies>
 					<dependency>
 						<groupId>de.andrena.tools.nopackagecycles</groupId>
@@ -418,6 +436,32 @@
 					</dependency>
 				</dependencies>
 				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[3.6.1,)</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
+					</execution>
+					<execution>
+						<id>enforce-java</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>[11,)</version>
+								</requireJavaVersion>
+							</rules>
+						</configuration>
+					</execution>
 					<execution>
 						<id>enforce-no-package-cycles</id>
 						<goals>
