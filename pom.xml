@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- testing libraries -->
-		<library.assertj.version>3.18.1</library.assertj.version>
+		<library.assertj.version>3.19.0</library.assertj.version>
 		<library.junit-jupiter.version>5.7.0</library.junit-jupiter.version>
 		<library.junit-platform.version>1.7.0</library.junit-platform.version>
 
@@ -24,7 +24,7 @@
 		<library.slf4j.version>1.7.30</library.slf4j.version>
 
 		<!-- utility libraries -->
-		<library.commons-lang3.version>3.11</library.commons-lang3.version>
+		<library.commons-lang3.version>3.12</library.commons-lang3.version>
 		<library.commons-io.version>2.8.0</library.commons-io.version>
 		<library.commons-codec.version>1.15</library.commons-codec.version>
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
@@ -87,12 +87,6 @@
 	</developers>
 
 	<dependencies>
-		<!-- Logging -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-		</dependency>
-	
 		<!-- Unit testing -->
 		<dependency>
 			<groupId>org.assertj</groupId>
@@ -355,6 +349,8 @@
 				<configuration>
 					<doclint>none</doclint>
 					<additionalparam>-Xdoclint:none</additionalparam>
+					<!-- Required source 8 configuration, otherwise javadoc will exit, ficed with jdk12 -->
+					<source>8</source>
 				</configuration>
 				<executions>
 					<execution>
