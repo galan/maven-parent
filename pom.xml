@@ -28,7 +28,7 @@
 		<library.commons-io.version>2.8.0</library.commons-io.version>
 		<library.commons-codec.version>1.15</library.commons-codec.version>
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
-		<library.guava.version>28.0-jre</library.guava.version>
+		<library.guava.version>29.0-jre</library.guava.version>
 		<library.guice.version>4.2.3</library.guice.version>
 		<library.checkstyle.version>8.39</library.checkstyle.version>
 
