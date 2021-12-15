@@ -1,5 +1,9 @@
+# 1.1.1
+* Updated libraries, eg. Log4Shell again
+
 # 1.1.0
 * Updated libraries, eg. Log4Shell
+* Not released
 
 # 1.0.1
 * Apache Commons Lang3 has finally switched to semver
