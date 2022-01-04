@@ -15,17 +15,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- testing libraries -->
-		<library.assertj.version>3.21.0</library.assertj.version>
+		<library.assertj.version>3.22.0</library.assertj.version>
 		<library.junit-jupiter.version>5.8.2</library.junit-jupiter.version>
 		<library.junit-platform.version>1.8.2</library.junit-platform.version>
 
 		<!-- logging libraries -->
-		<library.log4j2.version>2.16.0</library.log4j2.version>
+		<library.log4j2.version>2.17.1</library.log4j2.version>
 		<library.slf4j.version>1.7.32</library.slf4j.version>
 
 		<!-- utility libraries -->
 		<library.commons-lang3.version>3.12.0</library.commons-lang3.version>
-		<library.commons-io.version>2.8.0</library.commons-io.version>
+		<library.commons-io.version>2.11.0</library.commons-io.version>
 		<library.commons-codec.version>1.15</library.commons-codec.version>
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
 		<library.guava.version>29.0-jre</library.guava.version>
