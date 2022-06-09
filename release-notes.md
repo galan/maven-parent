@@ -1,3 +1,11 @@
+# 1.2.0
+* Updated libraries
+* Removed commons-codec
+* Removed Guice
+
+# 1.1.2
+* Updated libraries
+
 # 1.1.1
 * Updated libraries, eg. Log4Shell again
 
