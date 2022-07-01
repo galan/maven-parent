@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.galan</groupId>
@@ -11,11 +12,12 @@
 	<url>https://github.com/galan/maven-parent</url>
 
 	<properties>
-		<jdk.compiler.version>1.11</jdk.compiler.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- testing libraries -->
-		<library.assertj.version>3.22.0</library.assertj.version>
+		<library.assertj.version>3.23.1</library.assertj.version>
 		<library.junit-jupiter.version>5.8.2</library.junit-jupiter.version>
 		<library.junit-platform.version>1.8.2</library.junit-platform.version>
 
@@ -29,7 +31,7 @@
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
 		<library.guava.version>31.1-jre</library.guava.version>
 		<library.checkstyle.version>10.2</library.checkstyle.version>
-		<library.checkstyle-puppy.version>10.1</library.checkstyle-puppy.version>
+		<library.checkstyle-puppy.version>10.3.1</library.checkstyle-puppy.version>
 
 		<!-- maven plugins -->
 		<plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
@@ -248,9 +250,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${plugin.maven-compiler.version}</version>
 				<configuration>
-					<release>11</release>
-					<source>${jdk.compiler.version}</source>
-					<target>${jdk.compiler.version}</target>
+					<release>17</release>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.source}</target>
 				</configuration>
 			</plugin>
 
@@ -337,9 +339,7 @@
 				<version>${plugin.maven-javadoc.version}</version>
 				<configuration>
 					<doclint>none</doclint>
-					<additionalparam>-Xdoclint:none</additionalparam>
-					<!-- Required source 8 configuration, otherwise javadoc will exit, ficed with jdk12 -->
-					<source>8</source>
+					<source>17</source>
 				</configuration>
 				<executions>
 					<execution>
@@ -455,7 +455,8 @@
 						<phase>test</phase>
 						<configuration>
 							<rules>
-								<NoPackageCyclesRule implementation="de.andrena.tools.nopackagecycles.NoPackageCyclesRule">
+								<NoPackageCyclesRule
+										implementation="de.andrena.tools.nopackagecycles.NoPackageCyclesRule">
 									<includeTests>false</includeTests>
 								</NoPackageCyclesRule>
 							</rules>
