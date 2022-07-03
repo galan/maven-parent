@@ -6,9 +6,11 @@
 
 Maven parent pom for projects from https://github.com/galan
 
+
 # Changelog
 
 Read the [CHANGELOG.md](CHANGELOG.md) for curated release information.
+
 
 # Compatibility
 
