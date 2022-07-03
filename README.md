@@ -6,8 +6,12 @@
 
 Maven parent pom for projects from https://github.com/galan
 
+# Changelog
+
+Read the [CHANGELOG.md](CHANGELOG.md) for curated release information.
+
 # Compatibility
 
 * Latest Java 8 version: 0.11.3
-* Starting Java 11 with 0.12.0
-
+* Latest Java 11 version: 1.2.0
+* Starting Java 17 with 2.0.0
