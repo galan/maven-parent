@@ -28,7 +28,7 @@
 		<library.commons-lang3.version>3.12.0</library.commons-lang3.version>
 		<library.commons-io.version>2.11.0</library.commons-io.version>
 		<library.commons-collections4.version>4.4</library.commons-collections4.version>
-		<library.guava.version>31.1-jre</library.guava.version>
+		<library.guava.version>32.0.0-jre</library.guava.version>
 		<library.checkstyle.version>10.2</library.checkstyle.version>
 		<library.checkstyle-puppy.version>10.3.1</library.checkstyle-puppy.version>
 
